@@ -15,6 +15,8 @@ public interface AuthService {
     JwtToken signin(SigninDTO dto) throws Exception;
 
     void sendPasswordResetCode(String email);
+
     void confirmPasswordResetCode(String email, String passwordResetCode);
+
     void resetPassword(PasswordResetDTO dto);
 }
