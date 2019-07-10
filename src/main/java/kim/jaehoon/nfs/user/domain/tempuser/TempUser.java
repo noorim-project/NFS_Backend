@@ -15,7 +15,7 @@ import javax.persistence.Id;
 @Getter
 @Entity
 @NoArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
 public class TempUser extends BaseTimeEntity {
 
     @Id
