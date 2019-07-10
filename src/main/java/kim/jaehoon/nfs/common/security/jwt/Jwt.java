@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import com.auth0.jwt.internal.org.apache.commons.codec.binary.Base64
+import com.auth0.jwt.internal.org.apache.commons.codec.binary.Base64;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -72,7 +72,7 @@ public class Jwt {
         return jwtSigner.sign(claims, initSetting(refreshExp));
     }
 
-    public Map<String, Object> authToken(String token throws Exception) {
+    public Map<String, Object> authToken(String token) throws Exception {
         return jwtVerifier.verify(token);
     }
 
